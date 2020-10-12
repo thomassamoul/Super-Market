@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA0AA3D4-A239-47BD-87D7-0009DF2FE790}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Super_Market</RootNamespace>
+    <AssemblyName>Super Market</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>shopping cart.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Super_Market.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\ClsCategory.cs" />
+    <Compile Include="classes\ClsCustomer.cs" />
+    <Compile Include="classes\ClsItem.cs" />
+    <Compile Include="classes\ClsItemsCompany.cs" />
+    <Compile Include="classes\ClsItemsPlace.cs" />
+    <Compile Include="classes\ClsPurchase.cs" />
+    <Compile Include="classes\ClsSupplier.cs" />
+    <Compile Include="classes\ClsUser.cs" />
+    <Compile Include="Data\ClsAccess.cs" />
+    <Compile Include="Data\ClsMyTheme.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PL\Customer\FrmAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Customer\FrmAddCustomer.Designer.cs">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Customer\FrmCustomerManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Customer\FrmCustomerManager.Designer.cs">
+      <DependentUpon>FrmCustomerManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Items\FrmAddItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Items\FrmAddItems.Designer.cs">
+      <DependentUpon>FrmAddItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Items\FrmItemCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Items\FrmItemCompany.Designer.cs">
+      <DependentUpon>FrmItemCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Items\FrmItemManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Items\FrmItemManager.Designer.cs">
+      <DependentUpon>FrmItemManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Items\FrmItemsPlace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Items\FrmItemsPlace.Designer.cs">
+      <DependentUpon>FrmItemsPlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\purchase\FrmPurchaseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\purchase\FrmPurchaseList.Designer.cs">
+      <DependentUpon>FrmPurchaseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Main\ControlMain\UserControlMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\Main\ControlMain\UserControlMain.Designer.cs">
+      <DependentUpon>UserControlMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Main\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Main\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\purchase\FrmPurBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\purchase\FrmPurBill.Designer.cs">
+      <DependentUpon>FrmPurBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\purchase\FrmPurManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\purchase\FrmPurManager.Designer.cs">
+      <DependentUpon>FrmPurManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Supplier\FrmAddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Supplier\FrmAddSupplier.Designer.cs">
+      <DependentUpon>FrmAddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Supplier\FrmSupplierList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Supplier\FrmSupplierList.Designer.cs">
+      <DependentUpon>FrmSupplierList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Supplier\FrmSupplierManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Supplier\FrmSupplierManager.Designer.cs">
+      <DependentUpon>FrmSupplierManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\User\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\User\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\User\FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\User\FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Store\FrmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Store\FrmCategory.Designer.cs">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\User\FrmUserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\User\FrmUserManager.Designer.cs">
+      <DependentUpon>FrmUserManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="report\FrmCry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\FrmCry.Designer.cs">
+      <DependentUpon>FrmCry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\Items\ItemsAll.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemsAll.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="report\Items\OneItem.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OneItem.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\pur\OnePurchaseBill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OnePurchaseBill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\pur\PurPrintALl.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurPrintALl.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\SuppPrint\FrmMicroSoft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\SuppPrint\FrmMicroSoft.Designer.cs">
+      <DependentUpon>FrmMicroSoft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Super_MarketDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Super_MarketDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PL\Customer\FrmAddCustomer.resx">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Customer\FrmCustomerManager.resx">
+      <DependentUpon>FrmCustomerManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Items\FrmAddItems.resx">
+      <DependentUpon>FrmAddItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Items\FrmItemCompany.resx">
+      <DependentUpon>FrmItemCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Items\FrmItemManager.resx">
+      <DependentUpon>FrmItemManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Items\FrmItemsPlace.resx">
+      <DependentUpon>FrmItemsPlace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\purchase\FrmPurchaseList.resx">
+      <DependentUpon>FrmPurchaseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Main\ControlMain\UserControlMain.resx">
+      <DependentUpon>UserControlMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Main\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\purchase\FrmPurBill.resx">
+      <DependentUpon>FrmPurBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\purchase\FrmPurManager.resx">
+      <DependentUpon>FrmPurManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Supplier\FrmAddSupplier.resx">
+      <DependentUpon>FrmAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Supplier\FrmSupplierList.resx">
+      <DependentUpon>FrmSupplierList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Supplier\FrmSupplierManager.resx">
+      <DependentUpon>FrmSupplierManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\User\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\User\FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Store\FrmCategory.resx">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\User\FrmUserManager.resx">
+      <DependentUpon>FrmUserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="report\FrmCry.resx">
+      <DependentUpon>FrmCry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\Items\ItemsAll.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ItemsAll.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\Items\OneItem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OneItem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\pur\OnePurchaseBill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OnePurchaseBill.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\pur\PurPrintALl.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PurPrintALl.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\SuppPrint\FrmMicroSoft.resx">
+      <DependentUpon>FrmMicroSoft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\SuppPrint\Report1.rdlc" />
+    <EmbeddedResource Include="report\SuppPrint\Report2.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Super_MarketDataSet.xsc">
+      <DependentUpon>Super_MarketDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Super_MarketDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Super_MarketDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Super_MarketDataSet.xss">
+      <DependentUpon>Super_MarketDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\polyscape-city-wallpaper-for-3840x2160-4k-136-1117.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_windows_grow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applications_windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pinion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turn off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List.png" />
+    <None Include="Resources\calendar_week_edit.png" />
+    <Content Include="shopping cart.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
